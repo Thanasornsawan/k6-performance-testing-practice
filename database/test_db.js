@@ -1,7 +1,8 @@
 import sql from 'k6/x/sql';
 import {check, sleep, fail} from 'k6';
 const db = sql.open('mysql', 'root:P@ssw0rd1@tcp(127.0.0.1:3306)/APIDevelop');
-
+// install module with xk6 build --with github.com/grafana/xk6-sql 
+// ./k6 run database/test_db.js
 export const options={
     vus: 1,
     duration: '1s',

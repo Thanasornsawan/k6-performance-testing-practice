@@ -2,7 +2,12 @@ import http from 'k6/http';
 import {check, sleep, fail} from 'k6';
 
 /*
-
+    command
+    go install go.k6.io/xk6/cmd/xk6@latest
+    xk6 build --with github.com/szkiba/xk6-dashboard@latest
+    ./k6 run --out json=test_result.json --out dashboard loadTestingType/load_test.js
+    ./k6 dashboard replay test_result.json --open
+    --------------------------------------------
     Load testing is primarily concerned with assessing the current performance of your system
     in terms of concurrent users or requests per second.
     When you want to understand if your system is meeting the performance goals, this is the type of test you'll run.
